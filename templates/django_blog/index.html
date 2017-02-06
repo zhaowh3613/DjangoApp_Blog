@@ -10,7 +10,7 @@
 <h1>文章列表</h1>
 <br/>
 {% for article in articles %}
-    <a href="">{{ article.title }}</a>
+    <a href="{% url 'blog:article_page' article.id %}">{{ article.title }}</a>
     <br/>
 {% endfor %}
 </body>
