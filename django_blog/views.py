@@ -13,3 +13,6 @@ def article_page(request, article_id):
 
 def about(request):
     return render(request, 'django_blog/about.html')
+
+def contact(request):
+    return render(request, 'django_blog/contact.html')

@@ -48,17 +48,17 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
+                     <li>
                         <a href="{% url 'blog:index' %}">Home</a>
-                    </li>
-                    <li>
-                        <a href="post.html">Articles</a>
                     </li>
                     <li>
                         <a href="{% url 'blog:about' %}">About</a>
                     </li>
+{#                    <li>#}
+{#                        <a href="{% url 'blog:article_page' %}">Articles</a>#}
+{#                    </li>#}
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="{% url 'blog:contact' %}">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -89,7 +89,7 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 {% for article in articles %}
                     <div class="post-preview">
-                        <a href="{% url 'blog:article_page' article.id %}post.html">
+                        <a href="{% url 'blog:article_page' article.id %}">
                             <h2 class="post-title">
                                {{ article.title }}
                             </h2>
