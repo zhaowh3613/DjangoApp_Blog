@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+print("BASE_DIR: " + BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -25,7 +25,7 @@ SECRET_KEY = 'v$-eam2&zdl%wvk+f)anse-t$bo#$%ao&pl$)qlmd&5e!4r3_r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'vincemattie.com']
+ALLOWED_HOSTS = ['localhost', 'vincemattie.com', "127.0.0.1", "123.56.11.3"]
 
 
 # Application definition
@@ -118,6 +118,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+STATIC_ROOT = os.path.join(BASE_DIR, "/django_blog/static/")
+print("STATIC_ROOT: " + STATIC_ROOT)
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(os.path.dirname(__file__), '../templates/django_blog/../django_blog/static/').replace('\\', '/'),)
+# STATICFILES_DIRS = (os.path.join(os.path.dirname(__file__), '../templates/django_blog/../django_blog/static/').replace('\\', '/'),)
