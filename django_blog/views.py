@@ -16,3 +16,14 @@ def about(request):
 
 def contact(request):
     return render(request, 'django_blog/contact.html')
+
+def post(request):
+    return render(request, 'django_blog/post.html')
+
+def post_action(request):
+    title = request.POST.get('title', 'TITLE') #second arg is default value when exception
+    content = request.POST.get('content', 'CONTENT')
+    models.Article.objects.create(title=title, content=content)
+    articleList = models.Article.objects.all()
+    return render(request, 'django_blog/index.html', {'articles': articleList})
+
