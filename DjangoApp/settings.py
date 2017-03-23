@@ -25,7 +25,7 @@ SECRET_KEY = 'v$-eam2&zdl%wvk+f)anse-t$bo#$%ao&pl$)qlmd&5e!4r3_r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'vincemattie.com', "127.0.0.1", "123.56.11.3"]
+ALLOWED_HOSTS = ['localhost', 'www.vincemattie.com', "127.0.0.1", "123.56.11.3"]
 
 
 # Application definition
